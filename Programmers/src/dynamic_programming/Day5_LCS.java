@@ -1,7 +1,5 @@
 package dynamic_programming;
 
-import java.util.Scanner;
-
 public class Day5_LCS {
 	static String[] x = { "B", "D", "C", "A", "B", "A" };
 	static String[] y = { "A", "B", "C", "B", "D", "A", "B" };
@@ -9,11 +7,14 @@ public class Day5_LCS {
 
 	public static void main(String[] args) {
 		/*
-		 * Longest Common Subsequence <bcdb> => <abcbdab> 의 subsequence (부분) <bca> =>
-		 * <abcbdab>, <bdcaba> 의 common subsequence (공통부분)
+		 * Longest Common Subsequence 
+		 * 			<bcdb> => <abcbdab> 의 subsequence (부분) 
+		 * 			<bca> => <abcbdab>, <bdcaba> 의 common subsequence (공통부분)
 		 * 
-		 * L[i, j] 의 점화식 - 0 (i = 0 or j = 0) - L[i - 1, j - 1] + 1 (Xi = Yj) - max(L[i
-		 * - 1, j], L[i, j -1]) (otherwise)
+		 * L[i, j] 의 점화식 
+		 * 		- 0 (i = 0 or j = 0) 
+		 * 		- L[i - 1, j - 1] + 1 (Xi = Yj) 
+		 * 		- max(L[i - 1, j], L[i, j -1]) (otherwise)
 		 */
 		
 		Day5_LCS lcs = new Day5_LCS();
