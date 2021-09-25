@@ -16,6 +16,3 @@ def solution(bridge_length, weight, truck_weights):
             else:
                 cur.append(0)
     return time
-
-
-print(solution(2, 10, [7, 4, 5, 6]))
