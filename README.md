@@ -1,8 +1,3 @@
-## Dynamic Programming 
-* memoization
-* top-down / bottom-up
-* common trick
-
 ## Data Structure
 1. Stack
     * Last In First Out
@@ -29,3 +24,14 @@
       - default는 최소힙으로 작동, 최대힙의 효과를 발생시키기 위해서는 입력값의 부호를 반대로 바꿔야한다
       - heappush() : 마지막 레벨의 가장 오른쪽 노드에 추가
       - heappop() : 최상위 노드(최소값) 삭제
+
+5. Set
+    * 중복을 허용하지 않는 리스트
+    * python set() 생성자 이용
+        - add() / update() / discard()
+    
+
+## Dynamic Programming 
+* memoization
+* top-down / bottom-up
+* common trick
