@@ -35,3 +35,13 @@
 * memoization
 * top-down / bottom-up
 * common trick
+* 최단 경로 알고리즘
+   1. Floyd-Warshall
+    - 모든 노드에서 모든 노드로 가는 경로의 최단거리를 구하는 알고리즘
+    - min(dis[i][j], dis[i][k] + dis[k][j])
+   2. Dijkstra
+    - 특정 노드에서 모든 노드로 가는 최단거리를 구하는 알고리즘
+    - 음의 간선이 없을 때 정상적으로 동작
+   3. Bellman-Ford
+
+
