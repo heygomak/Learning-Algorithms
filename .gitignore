@@ -1,5 +1,6 @@
 venv/
 .idea/
 codingtest/
-inflearn/input.txt
+inflearn-python/input.txt
 poll/.ipynb_checkpoints
+baekjoon-python/input.txt

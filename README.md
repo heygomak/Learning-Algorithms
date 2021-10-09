@@ -13,15 +13,15 @@
 3. Hash
    * Key - Value 자료구조
    * python dictionary 사용
-      - items() : key, value 값을 한번에 탐색
-      - get(key, param) : key 값이 존재하면 value를 리턴, 존재하지 않으면 param을 리턴
+      - items() : key,  value 값을 한번에 탐색
+      - get(key,  param) : key 값이 존재하면 value를 리턴,  존재하지 않으면 param을 리턴
       - keys() : key 값들의 리스트 리턴
       - values() : value 값들의 리스트 리턴
     
 4. Heap
     * 완전이진트리 자료구조
     * python heapq 사용
-      - default는 최소힙으로 작동, 최대힙의 효과를 발생시키기 위해서는 입력값의 부호를 반대로 바꿔야한다
+      - default는 최소힙으로 작동,  최대힙의 효과를 발생시키기 위해서는 입력값의 부호를 반대로 바꿔야한다
       - heappush() : 마지막 레벨의 가장 오른쪽 노드에 추가
       - heappop() : 최상위 노드(최소값) 삭제
 
@@ -40,7 +40,7 @@
 ## 최단 경로 알고리즘
    1. Floyd-Warshall
     - 모든 노드에서 모든 노드로 가는 경로의 최단거리를 구하는 알고리즘
-    - min(dis[i][j], dis[i][k] + dis[k][j])
+    - min(dis[i][j],  dis[i][k] + dis[k][j])
    2. Dijkstra
     - 특정 노드에서 모든 노드로 가는 최단거리를 구하는 알고리즘
     - 음의 간선이 없을 때 정상적으로 동작
