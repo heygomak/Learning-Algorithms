@@ -21,23 +21,22 @@ public class N2504 {
 	    		stack.push(item);
 	    		mul *= item.equals("(") ? 2 : 3;  
 	    	} else {
-	    		if (!stack.empty()) {
-					if (item.equals(")")) {
-						if (stack.peek() == "(") {
-							stack.pop();
-						} else {
-							stack.push(item);
-						}
-	    			} else if (item.equals("]")) {
-	    				if (stack.peek() == "[") {
-							stack.pop();
-							
-						} else {
-							stack.push(item);
-						}
+	    		if(item.equals(")")) {
+	    			if (stack.isEmpty() || !stack.peek().equals("(")) {
+	    				sum = 0;
+                    }
+	    			if (stack.peek().equals("(")) {
+	    				sum += mul;
+	    				mul /= 2;
 	    			}
 	    		} else {
-	    			stack.push(item);
+	    			if (stack.isEmpty() || !stack.peek().equals("]")) {
+	    				sum = 0;
+                    }
+	    			if (stack.peek().equals("[")) {
+	    				sum += mul;
+	    				mul /= 3;
+	    			}
 	    		}
 	    	}
 	    }
