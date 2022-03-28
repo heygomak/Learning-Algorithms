@@ -1,3 +1,5 @@
+package acmicpc;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -10,9 +12,9 @@ public class N10828 {
 	static Stack<Integer> stack = new Stack<>();
 	
 	public static void main(String[] args) throws FileNotFoundException {
-	    //File file = new File(N10828.class.getResource("").getPath() + "input.txt");
-	    //Scanner scan = new Scanner(file);
-	    Scanner scan = new Scanner(System.in);
+	    File file = new File(N10828.class.getResource("").getPath() + "input.txt");
+	    Scanner scan = new Scanner(file);
+	    //Scanner scan = new Scanner(System.in);
 	    int size = Integer.parseInt(scan.nextLine());
 	    for(int i = 0; i < size; i++) {
 	    	StringTokenizer st = new StringTokenizer(scan.nextLine());

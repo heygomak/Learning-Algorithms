@@ -1,39 +1,47 @@
 package acmicpc;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.Arrays;
-import java.util.Scanner;
-import java.util.stream.Stream; 
+import java.util.stream.Stream;
 
 public class N10815 {
-	public static void main(String[] args) throws FileNotFoundException {
-		File file = new File(N10815.class.getResource("").getPath() + "input.txt");
-	    Scanner scan = new Scanner(file);
-	    //Scanner scan = new Scanner(System.in);
-	    
-	    int n = Integer.parseInt(scan.nextLine());
-	    int[] arr1 = Stream.of(scan.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-	    int m = Integer.parseInt(scan.nextLine());
-	    int[] arr2 = Stream.of(scan.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-	    int[] arr3 = arr2.clone();
-	    int[] answer = new int[m];
-	    int pointer = 0;
-	    
-	    Arrays.sort(arr1);
-	    Arrays.sort(arr3);
-	   
-	    for(int i = 0; i < m; i++) {
-	    	// binary search
-	    	if (arr3[i] == arr1[pointer]) {
-	    		pointer ++;
-    			//arr2[Arrays.asList(arr2).indexOf(arr3[i])] = 1;
-    		} else if (arr3[i] > arr1[pointer]) {
-    			//arr2[Arrays.asList(arr2).indexOf(arr3[i])] = 0;
-    		}
-	    }
-	    
-	    System.out.println(Arrays.toString(answer));
-	    
+
+	static int n;
+	static int[] arr1;
+	public static void main(String[] args) throws IOException {
+		File file = new File(System.getProperty("java.class.path").toString() + "\\acmicpc\\input.txt");
+		BufferedReader reader = new BufferedReader(new FileReader(file));
+		n = Integer.parseInt(reader.readLine());
+		arr1 = Stream.of(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+		int m = Integer.parseInt(reader.readLine());
+		int[] arr2 = Stream.of(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+
+		Arrays.sort(arr1);
+
+		for (int i = 0; i < m; i++) {
+			// binary search
+			if (binarySearch(arr2[i]) != -1) {
+				System.out.print(1 + " ");
+			} else {
+				System.out.print(0 + " ");
+			}
+		}
+	}
+
+	private static int binarySearch(int target) {
+		int start = 0;
+		int end = n - 1;
+		int mid;
+		while (start <= end) {
+			mid = (start + end) / 2;
+			if(arr1[mid] < target) {
+				start = mid + 1;
+			} else if (arr1[mid] > target) {
+				end = mid - 1;
+			} else {
+				return mid;
+			}
+		}
+		return -1;
 	}
 }
