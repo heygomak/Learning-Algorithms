@@ -12,7 +12,7 @@ package programmers;
 
 import java.util.*;
 
-class Day1_LargestNumber {
+class No_42746 {
 
     public String solution1(int[] numbers) {
 
@@ -92,7 +92,7 @@ class Day1_LargestNumber {
 
     public static void main(String[] args) {
         int[] numbers = new int[]{3,  30,  34,  5,  9};
-        Day1_LargestNumber sol = new Day1_LargestNumber();
+        No_42746 sol = new No_42746();
         System.out.println("solution1 : "+sol.solution1(numbers));
         System.out.println("solution2 : "+sol.solution2(numbers));
     }
