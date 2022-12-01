@@ -1,4 +1,4 @@
-package dynamic_programming;
+package dp;
 
 
 public class Day1_FibonacciNumbers {

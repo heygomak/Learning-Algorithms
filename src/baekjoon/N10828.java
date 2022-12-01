@@ -1,4 +1,4 @@
-package acmicpc;
+package baekjoon;
 
 import java.io.File;
 import java.io.FileNotFoundException;

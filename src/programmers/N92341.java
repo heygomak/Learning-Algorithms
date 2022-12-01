@@ -3,7 +3,7 @@ package programmers;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class No_92341 {
+public class N92341 {
     static int[] fees;
     static String[] records;
 

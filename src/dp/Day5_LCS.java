@@ -1,4 +1,4 @@
-package dynamic_programming;
+package dp;
 
 public class Day5_LCS {
 	static String[] x = { "B",  "D",  "C",  "A",  "B",  "A" };

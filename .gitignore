@@ -1,9 +1,3 @@
 venv/
 .idea/
-codingtest/
-inflearn-python/input.txt
-poll/.ipynb_checkpoints
-baekjoon-python/input.txt
-baekjoon-java/bin
-programmers-java/bin
-.project
+*.iml

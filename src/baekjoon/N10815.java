@@ -1,4 +1,4 @@
-package acmicpc;
+package baekjoon;
 
 import java.io.*;
 import java.util.Arrays;
