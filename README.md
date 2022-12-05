@@ -1,20 +1,31 @@
 ## Data Structure
 1. Stack
     * Last In First Out
-    * python에 별도의 자료구조 X, 리스트로 직접 구현, 리스트 함수 동일하게 사용
-
+    * python 별도의 자료구조 X, 리스트로 직접 구현, 리스트 함수 동일하게 사용
+    * java Stack 사용
+      <blockquote>
+      push() : 원소 추가<br>
+      pop() : 마지막 원소 꺼내서 출력<br>
+      peek() : 마지막 원소 꺼내지 않고 출력만<br>
+      contains(value) : Stack 안에 해당 값이 존재하는지
+      </blockquote>
       
 2. Queue
     * First In First Out 
     * python deque 사용
-    
       <blockquote>
       appendleft() : 앞에서 넣기<br>
       popleft() : 앞에서 꺼내기<br> 
       append() : 뒤에서 넣기<br> 
       pop() : 뒤에서 꺼내기
       </blockquote>
-
+    * java Queue 사용
+      <blockquote>
+      add(), offer() : 원소 추가<br>
+      remove() : 첫번째 원소 제거<br>
+      poll() : 첫번째 원소 제거하고 출력<br>
+      peek() : 첫번째 원소 제거하지 않고 출력만<br>
+      </blockquote>
 
 3. Hash
     * Key - Value 자료구조
