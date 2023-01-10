@@ -6,6 +6,9 @@ import static java.lang.Character.isUpperCase;
 
 public class N0102 {
     public String solution(String str) {
+        /** ascii number
+         * 대문자 65~90, 소문자 97~122 (+- 32)
+         * */
         String answer = "";
         for(char chr : str.toCharArray()) {
             answer += isUpperCase(chr) ? Character.toLowerCase(chr) : Character.toUpperCase(chr);
