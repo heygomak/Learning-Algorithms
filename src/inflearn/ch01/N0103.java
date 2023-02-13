@@ -1,6 +1,5 @@
-package inflearn;
+package inflearn.ch01;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class N0103 {
