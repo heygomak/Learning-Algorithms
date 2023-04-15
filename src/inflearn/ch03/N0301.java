@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public class N0301 {
     private int[] solution(int n, int m, int[] a, int[] b) {
-        int pointer1 = 0, pointer2 = 0; // two pointer
-        int totalCnt = n + m;  // 시간복잡도 목표치 O(N), 정렬시 O(N * logN) 으로 늘어남
+        // Two pointers 시간복잡도 목표치 : 단순 정렬시 O(N * logN) →  O(N)
+        int pointer1 = 0, pointer2 = 0;
+        int totalCnt = n + m;
         int nowCnt = 0;
         int[] result = new int[totalCnt];
 
