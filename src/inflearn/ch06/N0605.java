@@ -11,7 +11,7 @@ public class N0605 {
          *  array 처리시 O(nlogn)
          * */
 
-//        Arrays.sort(arr);
+//        Arrays.sort(arr); // 정렬을 먼저하면 훨씬 쉬움
 //        for(int i = 0; i < n - 1; i++){
 //            if(arr[i] == arr[i + 1]) return "D";
 //        }
