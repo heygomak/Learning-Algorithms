@@ -92,6 +92,14 @@
 
 <br>  
 
+## DFS (Depth First Search)
+### 스택프레임 (Stack Frame)
+![stack_frame](https://i.stack.imgur.com/P56ru.jpg)
+* 메모리의 스택 영역은 함수와 호출과 함께 할당되며,
+* 해당 함수의 매개변수, 호출이 끝난 뒤 돌아갈 복귀 주소, 함수에서 선언된 지역변수를 저장한다.
+
+<br>  
+
 ## 최단 경로 알고리즘
 ### 1. Floyd-Warshall 
 - 모든 노드에서 모든 노드로 가는 경로의 최단거리를 구하는 알고리즘
