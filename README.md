@@ -92,13 +92,19 @@
 
 <br>  
 
-## DFS (Depth First Search)
-### Recursion (with. Stack Frame)
+## Recursive, Tree, Graph
+### DFS (Depth First Search)
+* Recursion (with. Stack Frame)
 ![stack_frame](https://i.stack.imgur.com/P56ru.jpg)
 * 메모리의 스택 영역은 함수와 호출과 함께 할당되며,
 * 해당 함수의 매개변수, 호출이 끝난 뒤 돌아갈 복귀 주소, 함수에서 선언된 지역변수를 저장한다.
+* 재귀를 통한 완전탐색에 활용
 
-<br>  
+### BFS (Breadth First Search)
+* 최단 거리 구하기
+* 자료구조 Queue 활용
+* 이진트리를 레벨(= 거리)별로 탐색하는 기법
+  <br>  
 
 ## 최단 경로 알고리즘
 ### 1. Floyd-Warshall 

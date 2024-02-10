@@ -47,8 +47,14 @@ public class N42842 {
 
     public static void main(String[] args) {
         N42842 t = new N42842();
-        int brown = 8;
-        int yellow = 48;
+        int brown = 4800000;
+        int yellow = 1200000;
+
+        long start = System.currentTimeMillis();
+        System.out.println(start);
         System.out.println(Arrays.toString(solution(brown, yellow)));
+        long end = System.currentTimeMillis();
+        System.out.println(end);
+        System.out.println(end - start);
     }
 }
