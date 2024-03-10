@@ -3,10 +3,9 @@ package programmers;
 import java.util.*;
 
 public class N1844 {
-
-    static int[][] map;
-    static int[][] visited = new int[5][5];
-    static Queue<Node> queue = new LinkedList<>();
+    int[] dx = {0, 1, -1, 0};
+    int[] dy = {1, 0, 0, -1};
+    static int[][] visited;
     static class Node {
         int x, y;
         public Node(int x, int y) {
@@ -14,35 +13,41 @@ public class N1844 {
             this.y = y;
         }
     }
-    private boolean setPoint(int x, int y) {
-        if(x == 4 && y == 4) return true;
-        if(map[y][x] == 1 && visited[y][x] == 0) {
-            visited[y][x] = 1;
-            queue.offer(new Node(x, y));
-        }
-        return false;
-    }
-
-    public int solution(int[][] maps) {
+    private int bfs(int[][] maps) {
         int answer = 1;
-        map = maps;
-        visited[0][0] = 1;
+        Queue<Node> queue = new LinkedList<>();
         queue.offer(new Node(0, 0));
 
         while (!queue.isEmpty()) {
             for(int i = 0; i < queue.size(); i++) {
                 Node point = queue.poll();
-                int x = point.x;
-                int y = point.y;
-                if(y > 0 && setPoint(x, y - 1)) return answer + 1;
-                if(y < 4 && setPoint(x, y + 1)) return answer + 1;
-                if(x > 0 && setPoint(x - 1, y)) return answer + 1;
-                if(x < 4 && setPoint(x + 1, y)) return answer + 1;
+                int X = point.x;
+                int Y = point.y;
+                for(int j = 0; j < 4; j ++) {
+                    int x = X + dx[j];
+                    int y = Y + dy[j];
+                    if(x == maps.length - 1 && y == maps[0].length - 1) {
+                        return answer + 1;
+                    }
+                    if (x < 0 || x > maps.length - 1 || y < 0 || y > maps[0].length - 1) {
+                        continue;
+                    }
+                    if(maps[x][y] == 1 && visited[x][y] != 1) {
+                        visited[x][y] = 1;
+                        queue.offer(new Node(x, y));
+                    }
+                }
             }
             answer ++;
         }
-
         return -1;
+    }
+
+    public int solution(int[][] maps) {
+        visited = new int[maps.length][maps[0].length];
+        visited[0][0] = 1;
+
+        return bfs(maps);
     }
 
     public static void main(String[] args) {
